@@ -1,15 +1,17 @@
 <template>
   <div class="home">
-    home
-    <div @click="test">按钮</div>
-    <!-- <img alt="Vue logo" src="../assets/logo.png"> -->
-    <!-- <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/> -->
+    <router-link to="/">Home</router-link> |
+    <router-link to="/about">About</router-link> |
+    <router-link to="/subapp/vue2">subapp-vue2</router-link>
+    <div id="vue-2">
+      another
+    </div>
+    <router-view />
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-// import HelloWorld from '@/components/HelloWorld.vue' // @ is an alias to /src
 
 export default defineComponent({
   name: 'Home',

@@ -4,7 +4,14 @@
   "description": "",
   "main": "",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "app:install": "npm-run-all --serial install:*",
+    "app:start": "npm-run-all --parallel start:*",
+    "start:main": "cd app-vue3 && yarn serve",
+    "start:react": "cd subapp-react && yarn start",
+    "start:vue2": "cd subapp-vue2 && yarn serve",
+    "install:main": "cd app-vue3 && yarn",
+    "install:react": "cd subapp-react && yarn",
+    "install:vue2": "cd subapp-vue2 && yarn"
   },
   "author": "",
   "license": "ISC",
